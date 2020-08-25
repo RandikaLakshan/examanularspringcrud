@@ -17,9 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Books;
-import com.example.demo.model.Order;
 import com.example.demo.service.BooksService;
-import com.example.demo.service.OrderService;
 @CrossOrigin
 @RequestMapping("books")
 @RestController
@@ -27,7 +25,7 @@ public class BooksController {
 
 	@Autowired
 	private BooksService booksservice;
-	private OrderService orderservice;
+	
 
 	
 	//add books
@@ -66,14 +64,5 @@ public class BooksController {
 	
 }
 	
-	@GetMapping("/order")
-	
-	public List<Order> getAllOrders(){
-		
-		return orderservice.getAllOrders();
-		
-		
-		
-		
-	}
+
 }
